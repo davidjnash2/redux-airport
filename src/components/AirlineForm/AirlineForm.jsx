@@ -21,7 +21,7 @@ function AirlineForm(){
         <form onSubmit={handleSubmit}>
             <input 
                 type="text"
-                placeholder="Come fly the friendly skies"
+                placeholder="Who, now?"
                 onChange={(event) => setNewAirline(event.target.value)} 
                 value={newAirline}
             />

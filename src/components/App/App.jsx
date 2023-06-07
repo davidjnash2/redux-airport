@@ -8,7 +8,16 @@ function App() {
     <div>
       <h1>Redux Airport</h1>
       <AirlineForm />
-      <table><AirlineList /></table>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Come fly the friendly skies!
+            </th>
+          </tr>
+        </thead>
+        <AirlineList />
+      </table>
     </div>
   );
 }

@@ -20,7 +20,16 @@ const airlineList = (state = [], action) => {
 }
 
 /** TODO: Create store */
-
+const storeInstance = createStore(
+    combineReducers(
+        {
+        airlineList
+        }
+    ),
+    applyMiddleware(
+        logger
+    )
+);
 
 
 // Be sure to add the Provider! Just wrap App with it. Don't copy and paste from lecture, that will cause issues.

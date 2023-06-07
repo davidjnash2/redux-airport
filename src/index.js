@@ -34,7 +34,6 @@ const storeInstance = createStore(
     combineReducers(
         {
         airlineList
-        // numberPlanes
         }
     ),
     applyMiddleware(

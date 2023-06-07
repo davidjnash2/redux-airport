@@ -1,4 +1,5 @@
 import {useSelector} from 'react-redux';
+import './AirlineList.css';
 
 function AirlineList(){
 
@@ -10,11 +11,11 @@ function AirlineList(){
             {airlineList.map((airline, i) => (
                 <tr key={i}>
                     <td>
-                        {airline}
+                        {airline.name}
                     </td>
-                    {/* <td>
-                        {planes}
-                    </td> */}
+                    <td>
+                        {airline.number}
+                    </td>
                 </tr>
             ))}
         </tbody>

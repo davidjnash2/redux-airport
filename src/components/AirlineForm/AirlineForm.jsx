@@ -6,22 +6,18 @@ function AirlineForm(){
     const dispatch = useDispatch();
 
     const [newAirline, setNewAirline] = useState('');
-    // const [newPlanes, setNewPlanes] = useState('');
+    const [newPlanes, setNewPlanes] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(
             {
                 type: 'ADD_AIRLINE',
-                payload: newAirline
-            },
-            // {
-            //     type: 'ADD_PLANES',
-            //     payload: newPlanes
-            // }
+                payload: {name: newAirline, number: newPlanes}
+            }
         );
         setNewAirline('');
-        // setNewPlanes('');
+        setNewPlanes('');
     }
 
 
@@ -33,12 +29,12 @@ function AirlineForm(){
                 onChange={(event) => setNewAirline(event.target.value)} 
                 value={newAirline}
             />
-            {/* <input 
+            <input 
                 type="number"
                 placeholder="And how many?"
                 onChange={(event) => setNewPlanes(event.target.value)} 
                 value={newPlanes}
-            /> */}
+            />
             <button type="submit">
                 Get them planes up!
             </button>

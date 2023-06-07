@@ -14,6 +14,9 @@ function App() {
             <th>
               Come fly the friendly skies!
             </th>
+            <th>
+              # of deathtraps
+            </th>
           </tr>
         </thead>
         <AirlineList />

@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 function AirlineList(){
 
     const airlineList = useSelector(store => store.airlineList)
+    
 
     return (
         <tbody>
@@ -11,6 +12,9 @@ function AirlineList(){
                     <td>
                         {airline}
                     </td>
+                    {/* <td>
+                        {planes}
+                    </td> */}
                 </tr>
             ))}
         </tbody>

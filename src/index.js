@@ -12,18 +12,29 @@ import logger from 'redux-logger';
 const airlineList = (state = [], action) => {
     console.log('in airlineList reducer');
     if (action.type === 'ADD_AIRLINE'){
-        console.log(`confirm that action.payload is ${action.payload}`);
+        console.log(`confirm that airlineList action.payload is ${action.payload}`);
         return [...state, action.payload]
     }
     
     return state;
 }
 
+// const numberPlanes = (state = [], action) => {
+//     console.log('in numberPlanes reducer');
+//     if (action.type === 'ADD_PLANES'){
+//         console.log(`cofirm that numberPlanes action.payload is ${action.payload}`);
+//         return [...state, action.payload]
+//     }
+
+//     return state;
+// }
+
 /** TODO: Create store */
 const storeInstance = createStore(
     combineReducers(
         {
         airlineList
+        // numberPlanes
         }
     ),
     applyMiddleware(
